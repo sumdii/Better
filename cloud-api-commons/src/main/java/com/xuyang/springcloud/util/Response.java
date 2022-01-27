@@ -1,5 +1,6 @@
 package com.xuyang.springcloud.util;
 
+import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,16 +11,12 @@ import lombok.NoArgsConstructor;
  * @Author xuyang
  */
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class Response<T> {
     private Integer code;
     private String msg;
     private T data;
-
-    public Response(Integer code, String msg) {
-        this(code, msg, null);
-    }
 
     public static <T> Response<T> success(T data) {
         return new Response<>(200, "success", data);
