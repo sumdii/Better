@@ -1,8 +1,8 @@
 package com.xuyang.springcloud.controller;
 
-import com.xuyang.springcloud.entity.Payment;
-import com.xuyang.springcloud.service.PaymentService;
-import com.xuyang.springcloud.util.Response;
+import com.xuyang.springcloud.common.entity.Payment;
+import com.xuyang.springcloud.common.service.PaymentService;
+import com.xuyang.springcloud.common.util.Response;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
