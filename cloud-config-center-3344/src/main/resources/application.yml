@@ -1,0 +1,23 @@
+server:
+  port: 3344
+
+spring:
+  cloud:
+    zookeeper:
+      connect-string: localhost:2181
+    config:
+      server:
+        git:
+          # github上面的git地址
+          uri: https://github.com/sumdii/spring-cloud-config.git
+          username: sumdi8512@gmail.com
+          password: dandingdanran.123
+          search-paths:
+            # 仓库名
+            - spring-cloud-config
+          force-pull: true
+          refresh-rate: 1
+      # 分支名
+      label: main
+  application:
+    name: cloud-config-center
