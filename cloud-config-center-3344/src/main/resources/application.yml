@@ -2,6 +2,11 @@ server:
   port: 3344
 
 spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: user
+    password: password
   cloud:
     zookeeper:
       connect-string: localhost:2181
@@ -9,15 +14,15 @@ spring:
       server:
         git:
           # github上面的git地址
-          uri: https://github.com/sumdii/spring-cloud-config.git
-          username: sumdi8512@gmail.com
-          password: dandingdanran.123
+          uri: https://gitee.com/sumdi/spring-cloud-config.git
+          username: sumdi8512@gmail.com # gitee 用户名
+          password: danding.123 # gitee 密码
           search-paths:
-            # 仓库名
-            - spring-cloud-config
+            # 文件所处文件夹路径
+            - config
           force-pull: true
           refresh-rate: 1
       # 分支名
-      label: main
+      label: master
   application:
     name: cloud-config-center
