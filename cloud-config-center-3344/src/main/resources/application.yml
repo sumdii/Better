@@ -26,3 +26,10 @@ spring:
       label: master
   application:
     name: cloud-config-center
+
+# 暴露监控端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
