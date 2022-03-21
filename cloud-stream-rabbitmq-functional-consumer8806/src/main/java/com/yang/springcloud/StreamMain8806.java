@@ -19,7 +19,7 @@ public class StreamMain8806 {
     }
 
     @Bean
-    public Consumer<Date> sink1() {
+    public Consumer<String> sink1() {
         return System.out::println;
     }
 }

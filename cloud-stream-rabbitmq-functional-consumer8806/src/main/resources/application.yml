@@ -15,6 +15,7 @@ spring:
         sink1-in-0: # 这个名字是一个通道的名称
           destination: studyExchange # 表示要使用的Exchange名称定义
           content-type: application/json # 设置消息类型，本次为对象json，如果是文本则设置“text/plain”
+          group: yang'sGroup
       function:
         definition: sink1
     zookeeper:

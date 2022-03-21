@@ -15,7 +15,10 @@ spring:
         source1-out-0: # 这个名字是一个通道的名称
           destination: studyExchange # 表示要使用的Exchange名称定义
           content-type: application/json # 设置消息类型，本次为对象json，如果是文本则设置“text/plain”
+        source2-out-0: # 这个名字是一个通道的名称
+          destination: noStudyExchange # 表示要使用的Exchange名称定义
+          content-type: application/json # 设置消息类型，本次为对象json，如果是文本则设置“text/plain”
     function:
-      definition: source1
+      definition: source1;source2
     zookeeper:
       connect-string: localhost:2181
