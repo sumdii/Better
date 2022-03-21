@@ -30,6 +30,9 @@
         <module>cloud-stream-rabbitmq-provider8801</module>
         <module>cloud-stream-rabbitmq-consumer8802</module>
         <module>cloud-stream-rabbitmq-consumer8803</module>
+        <module>cloud-stream-rabbitmq-functional-consumer8805</module>
+        <module>cloud-stream-rabbitmq-functional-consumer8806</module>
+        <module>cloud-stream-rabbitmq-functional-provider8804</module>
     </modules>
     <packaging>pom</packaging>
 
