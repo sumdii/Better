@@ -1,6 +1,7 @@
 package com.yang.springcloud.service.impl;
 
 import com.yang.springcloud.service.IMessageProvider;
+import com.yang.springcloud.source.MySource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.annotation.Output;
@@ -16,14 +17,14 @@ import java.util.UUID;
  * @description 定义消息的推送管道，需要使用@EnableBinding(Source.class)注解
  * @date 2022/3/8
  */
-@EnableBinding(Source.class)
+@EnableBinding(MySource.class)
 @Slf4j
 public class MessageProviderImpl implements IMessageProvider {
     /**
      * 消息发送管道
      */
     @Resource
-    @Output(Source.OUTPUT)
+    @Output(MySource.MY_OUTPUT)
     private MessageChannel outputChannel;
 
     @Override

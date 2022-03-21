@@ -1,5 +1,6 @@
 package com.yang.springcloud.listener;
 
+import com.yang.springcloud.sink.MySink;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.stream.annotation.EnableBinding;
@@ -14,13 +15,13 @@ import org.springframework.stereotype.Component;
  * @date 2022/3/8
  */
 @Component
-@EnableBinding(Sink.class)
+@EnableBinding(MySink.class)
 @Slf4j
 public class MessageListener {
     @Value("${server.port}")
     private String serverPort;
 
-    @StreamListener(Sink.INPUT)
+    @StreamListener(MySink.MY_INPUT)
     public void receive(Message<String> message) {
         log.info("Message received: [{}] from port: [{}]", message.getPayload(), serverPort);
     }
